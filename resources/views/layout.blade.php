@@ -93,7 +93,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
-          fetch('/api/pengaturan')
+          fetch('https://damaarsi.madanateknologi.web.id/api/pengaturan')
               .then(response => response.json())
               .then(data => {
                   const settings = data.pengaturan;

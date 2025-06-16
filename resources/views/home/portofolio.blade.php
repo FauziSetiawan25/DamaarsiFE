@@ -41,7 +41,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('/api/portofolio')
+            fetch('https://damaarsi.madanateknologi.web.id/api/portofolio')
                 .then(response => response.json())
                 .then(data => {
                     const container = document.getElementById('portofolioContainer');
@@ -65,7 +65,7 @@
                             portofolio.gambar_portofolio[0].gambar :
                             null;
                         const imageUrl = firstImage ?
-                            `/storage/portofolio/${firstImage}` :
+                            `https://damaarsi.madanateknologi.web.id/storage/portofolio/${firstImage}` :
                             '/images/no-image.jpg'; // fallback jika tidak ada gambar
 
                         const cardHTML = `

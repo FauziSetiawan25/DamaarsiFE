@@ -142,7 +142,7 @@
             const pathSegments = window.location.pathname.split('/');
             const productId = pathSegments[pathSegments.length - 1];
 
-            fetch(`/api/produk/${productId}`)
+            fetch(`https://damaarsi.madanateknologi.web.id/api/produk/${productId}`)
                 .then(response => response.json())
                 .then(data => {
                     const produk = data.data;
@@ -182,7 +182,7 @@
                         const carouselItem = document.createElement('div');
                         carouselItem.className = 'carousel-item' + (index === 0 ? ' active' : '');
                         carouselItem.innerHTML = `
-                            <img src="/storage/produk/${image.gambar}" class="d-block w-100 rounded" style="height: 500px; object-fit: cover;" alt="Product Image ${index + 1}">
+                            <img src="https://damaarsi.madanateknologi.web.id/storage/produk/${image.gambar}" class="d-block w-100 rounded" style="height: 500px; object-fit: cover;" alt="Product Image ${index + 1}">
                         `;
                         carouselInner.appendChild(carouselItem);
                     });
@@ -215,7 +215,7 @@
     formData.append('email', email);
 
     try {
-        const response = await fetch('/api/customer/add', {
+        const response = await fetch('https://damaarsi.madanateknologi.web.id/api/customer/add', {
             method: 'POST',
             body: formData,
             headers: {
@@ -227,7 +227,7 @@
         console.log(result); 
 
         if (result.message && result.message.toLowerCase().includes("berhasil")) {
-            const pengaturanRes = await fetch('/api/pengaturan');
+            const pengaturanRes = await fetch('https://damaarsi.madanateknologi.web.id/api/pengaturan');
             const pengaturanJson = await pengaturanRes.json();
 
             const waSetting = pengaturanJson.pengaturan.find(item => item.keterangan.toLowerCase() === 'whatsapp');

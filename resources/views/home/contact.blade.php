@@ -50,7 +50,7 @@
     </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/api/pengaturan')
+    fetch('https://damaarsi.madanateknologi.web.id/api/pengaturan')
         .then(response => response.json())
         .then(data => {
             const contactInfo = data.pengaturan;

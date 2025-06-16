@@ -69,7 +69,7 @@
             const pathSegments = window.location.pathname.split('/');
             const portofolioId = pathSegments[pathSegments.length - 1];
 
-            fetch(`/api/portofolio/${portofolioId}`)
+            fetch(`https://damaarsi.madanateknologi.web.id/api/portofolio/${portofolioId}`)
                 .then(response => response.json())
                 .then(data => {
                     const portofolio = data.data;
@@ -86,7 +86,7 @@
                     portofolio.gambar_portofolio.forEach(image => {
                         const imgHTML = `
                             <div class="col-md-6 mb-4">
-                                <img src="/storage/portofolio/${image.gambar}" class="img-fluid w-100 rounded" alt="Portfolio Image">
+                                <img src="https://damaarsi.madanateknologi.web.id/storage/portofolio/${image.gambar}" class="img-fluid w-100 rounded" alt="Portfolio Image">
                             </div>
                         `;
                         imagesContainer.innerHTML += imgHTML;

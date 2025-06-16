@@ -67,7 +67,7 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('/api/produk')
+        fetch('https://damaarsi.madanateknologi.web.id/api/produk')
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('packageCatalogContainer');
@@ -87,7 +87,7 @@
                 packages.forEach(product => {
                         const firstImage = product.gambar_produk.length > 0 ? product.gambar_produk[0]
                             .gambar : null;
-                        const imageUrl = firstImage ? `/storage/produk/${firstImage}` :
+                        const imageUrl = firstImage ? `https://damaarsi.madanateknologi.web.id/storage/produk/${firstImage}` :
                             '/images/no-image.jpg'; // fallback jika tidak ada gambar
 
                     const cardHTML = `
