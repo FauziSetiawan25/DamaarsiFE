@@ -277,7 +277,7 @@
                     return;
                 }
 
-                fetch('/api/logout', {
+                fetch('http://127.0.0.1:8000/api/logout', {
                     method: 'POST',
                     headers: {
                         'Accept': 'application/json',

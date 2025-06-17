@@ -239,7 +239,7 @@
                     const id = this.getAttribute('data-id');
                     const formData = new FormData(this);
         
-                    fetch(`/api/layanan/${id}`, {
+                    fetch(`http://127.0.0.1:8000/api/layanan/${id}`, {
                         method: 'POST',
                         headers: {
                             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
@@ -274,7 +274,7 @@
                     const id = this.getAttribute('data-id');
                     const formData = new FormData(this);
         
-                    fetch(`/api/memilih/${id}`, {
+                    fetch(`http://127.0.0.1:8000/api/memilih/${id}`, {
                         method: 'POST',
                         headers: {
                             'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,

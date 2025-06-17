@@ -89,7 +89,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        fetch('/api/visitor/stats') // Panggil API untuk mengambil data pengunjung
+        fetch('http://127.0.0.1:8000/api/visitor/stats') // Panggil API untuk mengambil data pengunjung
             .then(response => response.json())
             .then(data => {
                 var ctx = document.getElementById('visitorChart').getContext('2d');
@@ -126,7 +126,7 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        fetch('/api/visitor/count') // Pastikan ini adalah endpoint yang benar
+        fetch('http://127.0.0.1:8000/api/visitor/count') // Pastikan ini adalah endpoint yang benar
             .then(response => response.json())
             .then(data => {
                 if (data.total_pengunjung !== undefined) {
@@ -142,7 +142,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        fetch('/api/customer/count') // Pastikan ini adalah endpoint yang benar
+        fetch('http://127.0.0.1:8000/api/customer/count') // Pastikan ini adalah endpoint yang benar
             .then(response => response.json())
             .then(data => {
                 if (data.total_customer !== undefined) {
@@ -158,7 +158,7 @@
     });
 
     document.addEventListener("DOMContentLoaded", function () {
-        fetch('/api/produk/count') // Pastikan ini adalah endpoint yang benar
+        fetch('http://127.0.0.1:8000/api/produk/count') // Pastikan ini adalah endpoint yang benar
             .then(response => response.json())
             .then(data => {
                 if (data.total_produk !== undefined) {
